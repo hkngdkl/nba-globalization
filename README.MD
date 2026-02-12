@@ -1,49 +1,47 @@
-# NBA Globalization Since 1990
+# How the NBA Became Global
 
-This project analyzes how the NBA has globalized over the past three decades by examining
-the origins of players entering the league each year.
+## Overview
+This project analyzes how the share of Non-USA players entering the NBA has changed since 1990.  
+Using a self-collected dataset of over 5,000 NBA players, the analysis focuses on entry cohorts — counting players only in the year they first appeared in the league.
 
-Unlike many analyses that rely on pre-built datasets, the dataset used in this project
-was created from scratch by collecting publicly available player information and defining
-a consistent NBA debut year for each player.
-
-## Research Question
-How has the share of Non-USA players entering the NBA changed since 1990?
+---
 
 ## Dataset
-- Self-collected NBA player biographical data
-- Each player is counted only in their NBA debut year
-- Covers debut years from 1990 to 2025
+The dataset was programmatically collected from publicly available sources and includes:
+
+- player_name  
+- player_url  
+- country  
+- debut_year  
+
+Each player is counted only once in their debut year to avoid cumulative bias.
+📦 Kaggle Dataset:https://www.kaggle.com/datasets/hakangedikli/nba-players-bio-dataset-debut-year-and-country
+
+---
 
 ## Methodology
-- Players classified as USA vs Non-USA based on country of origin
-- Time-series analysis of yearly NBA entrants
-- Period comparison using pie charts (1990–1999 vs 2000–2025)
+- Players classified as USA vs Non-USA  
+- Cohort-based analysis (debut year focus)  
+- Time range: 1990–2025  
+- Visualizations: line chart + comparative pie charts 
 
-## Key Findings
-- In the 1990s, only about 10% of players entering the NBA were Non-USA
-- Since 2000, that figure has increased to approximately 23%
-- NBA growth in recent decades has increasingly relied on international talent
+---
 
-## Structure
-nba-globalization/
-├── data/
-│   └── raw/
-│       ├── players_bios.csv
-│       └── all_star_selections.csv
-├── notebooks/
-│   └── 01_nba_globalization_story.ipynb
-├── scripts/
-│   ├── 01_collect_player_index.py
-│   ├── 02_collect_player_bios.py
-│   └── 03_collect_all_stars_wikipedia_en.py
+## Results
+- Non-USA players represented ~10% of new entrants in the 1990s  
+- Since 2000, that share has increased to ~23%  
+- The NBA’s growth has increasingly been driven by international talent  
 
 
-## Tools
-- Python
-- Pandas
-- Matplotlib
-- Seaborn
+---
 
-## Notes
-This project was created as part of the Codédex Monthly Data Challenge.
+## Repository Structure
+-data/
+-notebooks/
+-scripts/
+-docs
+
+---
+
+## Author
+Hakan
